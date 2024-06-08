@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:ital,wght@1,900&family=Oswald:wght@500&family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  padding-top: 110px;
+  background-image: url("../imagenes/bg-carta.jpg");
+  background-size: 100%;
+  font-family: "Oswald";
+}
+
+#container-all {
+  width: 100%;
+  height: 100%;
+}
+
+#container-all h1 {
+  font-size: 70px;
+  text-align: center;
+  padding: 30px 0;
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.productos {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 22px;
+  gap: 45px 30px;
+  padding-bottom: 75px;
+}
+
+#producto {
+  width: 400px;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+}
+
+#producto a {
+  display: block;
+  width: 150px;
+  flex-shrink: 0;
+}
+
+#producto img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px 0 0 8px;
+}
+
+#info-producto {
+  width: 100%;
+  display: flex;
+  padding: 12px 8px 8px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  margin-left: 5px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+  text-transform: uppercase;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-right: 10px;
+  flex-grow: 2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.boton-compra {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: #ee2737;
+  margin-right: 10px;
+  border-radius: 100%;
+  padding: 10px;
+  margin-bottom: 3px;
+}
+
+.boton-compra i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.boton-compra:hover {
+  color: #ee2737;
+  background: black;
+  transition: 0.2s ease-in;
+}
+
+.contenedor-carrito {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 11;
+}
+
+#btn-final{
+  width: 160px;
+  height: 45px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ee2737;
+  border: 2px #ee2737 solid;
+  border-radius: 32px;
+  padding: 16px 16px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 12px;
+}
+
+#btn-final:hover {
+  color: #ee2737;
+  background: black;
+  transition: 0.2s ease-in;
+}
+
+#btn-reiniciar{
+  width: 160px;
+  height: 45px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: black;
+  border: 2px white solid;
+  border-radius: 32px;
+  padding: 16px 16px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#btn-reiniciar:hover{
+  color: black;
+  background-color: white;
+  transition: 0.5s;
+}
+
+#cantidad-carrito-container{
+  padding: 10px 20px;
+  background: white;
+  background-position: center;
+  color: black;
+  font-size: 24px;
+  border-radius: 100%;
+  border: 3px solid #ee2737;
+  cursor: pointer;
+}
+
+.detallesCarrito {
+  width: 400px;
+  cursor: crosshair;
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  max-height: 500px;
+  overflow-y: auto;
+  z-index: 12;
+  border: 3px solid #ee2737;
+}
+
+.detallesCarrito h2 {
+  background-color: black;
+  width: 100%;
+  font-family: "Oswald";
+  color: #ee2737;
+}
+
+.detallesCarrito table {
+  width: 100%;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.detallesCarrito th{
+  padding-bottom: 10px;
+}
+
+.detallesCarrito tr {
+  margin: 10px 0;
+  font-size: 24px;
+  width: 100%;
+}
+
+.detallesCarrito tr:last-child {
+  border-top: 4px solid black;
+}
+
+.detallesCarrito tr:last-child td{
+  padding-top: 15px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  display: none;
+}
+
+.alert-container {
+  text-align: center;
+  position: fixed;
+  height: 1000px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1100;
+  display: none;
+}

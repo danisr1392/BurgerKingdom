@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:ital,wght@1,900&family=Oswald:wght@500&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: #E9E9EB;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+main{
+    padding-top: 110px;
+    font-family: "Oswald";
+    background-image: url("../imagenes/bg-carta.jpg");
+}
+
+#productos div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    text-align: center;
+    font-size: 70px;
+    text-align: center;
+    font-weight: bold;
+    padding: 70px 0;
+    color: red;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#burger h2, #snack h2, #bebida h2{
+    font-size: 40px;
+    padding: 0 20px;
+    z-index: 1;
+    color: white;
+}
+
+#burger a, #snack a, #bebida a{
+    width: 340px;
+}
+
+#burger img, #snack img, #bebida img{
+    width: 340px;
+    height: 340px;
+    transition: 0.3s ease;
+}
+
+#burger a:hover img, #snack a:hover img,
+#bebida a:hover img {
+    opacity: 0.3;
+}
+
+#burger a:hover h2, #snack a:hover h2,
+#bebida a:hover h2 {
+    opacity: 1;
+    color: red;
+    text-shadow: 0 3px 6px rgba(0,0,0,.16);
+}
+
+#bebida:hover{
+    cursor: crosshair;
+}

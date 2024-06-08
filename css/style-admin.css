@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:ital,wght@1,900&family=Oswald:wght@500&family=Poppins&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+main{
+  min-height: 100%;
+  background-image: url("../imagenes/back-admin.svg");
+  background-position: center;
+  background-size: 120%;
+  padding-bottom: 100px;
+}
+
+#div-center {
+    padding-top: 40px;
+    text-align: center;
+}
+
+#btn-cerrar{
+    width: 190px;
+    height: 45px;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ee2737;
+    border: 2px #ee2737 solid;
+    border-radius: 32px;
+    padding: 16px 16px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 12px;
+}    
+
+#btn-cerrar:hover{
+    color: black;
+    background-color: #ffb600;
+    border: 2px #ffb600 solid;
+    transition: 0.5s;
+}
+
+#h1-bv{
+    color: #ee2737;
+    font-family: "Oswald";
+    font-size: 50px;
+    padding: 60px;
+}
+
+#container-img{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.image-container {
+    width: 375px;
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 375px;
+    border: 3px solid #ee2737;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.image-container h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 375px;
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-align: center;
+    font-family: "Oswald";
+    border: 3px solid #ee2737;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 30px 30px;
+}
+
+
+.image-container:hover img,
+.image-container:hover h1 {
+    cursor: pointer;
+}
+
+.image-container:hover h1 {
+    background-color: #ee2737;
+    color: black;
+}
+
+.image-container img:hover {
+    filter: brightness(0.8);
+}
+
+/*boton atras*/
+.btn-atras{
+    width: 190px;
+    height: 45px;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ee2737;
+    border: 2px #ee2737 solid;
+    border-radius: 32px;
+    padding: 16px 16px;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    gap: 12px;
+    text-decoration: none;
+}
+
+#btn-atras:hover{
+    color: black;
+    background-color: #ffb600;
+    border: 2px #ffb600 solid;
+    transition: 0.5s;
+}
+
+.container form span{
+    color: #ee2737;
+    font-family: "Oswald";
+    float: left;
+}
+
+.container form h2{
+    width: auto;
+    color: white;
+    font-family: "Oswald";
+    font-size: 40px;
+    padding-top: 30px;
+}
+
+.container form input{
+    width: 90%;
+    padding: 8px;
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: "Oswald";
+    border-radius: 30px;
+    border: 3px solid #ee2737;
+    background-color: white;
+}
+
+.container form select{
+    width: 90%;
+    padding: 8px;
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: "Oswald";
+    border-radius: 30px;
+    border: 3px solid #ee2737;
+    background-color: white;
+}
+
+.container form input:focus{
+    outline: none;
+}
+
+.container form button{
+    width: 90%;
+    font-family: "Oswald";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ee2737;
+    border: 2px #ee2737 solid;
+    border-radius: 32px;
+    padding: 16px 16px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.container form button:hover{
+    color: white;
+    background-color: black;
+    border: 2px #ee2737 solid;
+    transition: 0.5s;
+}
+
+.container form #form1b span{
+    color: #ee2737;
+    font-family: "Oswald";
+    float: left;
+    padding-bottom: 20px;
+}
+
+/*************************/
+/*****AÑADIR PRODUCTO*****/
+/*************************/
+.formulario1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario1 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 2px solid #ee2737;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+.ingredientes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ingrediente {
+    flex: 0 0 calc(25% - 10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.ingrediente-img {
+    width: 128px;
+    height: 128px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: aliceblue;
+    padding: 4px;
+}
+
+.ingrediente-img.selected {
+    transition: 0.3s ease-in-out;
+    border: 8px solid #ee2737;
+    border-radius: 30px;
+}
+
+.ingrediente label {
+    margin-top: 10px;
+    font-family: "Oswald";
+    color: aliceblue;
+    font-size: large;
+}
+
+/*AJUSTES PARA QUE LAS IMAGENES NO SE VAYAN A LA IZQUIERDA DEL FORM*/
+
+@media (max-width: 768px) {
+    .ingrediente {
+        flex: 0 0 calc(50% - 10px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .ingrediente {
+        flex: 0 0 calc(100% - 10px);
+    }
+}
+
+
+/*************************/
+/*****BORRAR PRODUCTO*****/
+/*************************/
+#formulario2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+#formulario2 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 2px solid #ee2737;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+
+#formulario2 #producto{
+    width: 90%;
+    padding: 15px;
+    margin: 20px 0;
+    font-size: 20px;
+    font-family: "Oswald";
+    border-radius: 30px;
+    border: 3px solid #ee2737;
+    background-color: white;
+}
+
+/**********************/
+/*****AÑADIR ADMIN*****/
+/**********************/
+
+#formulario3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario3 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 2px solid #ee2737;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+/************************/
+/*****BORRAR USUARIO*****/
+/************************/
+
+#formulario4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+#formulario4 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 2px solid #ee2737;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+/****************************/
+/*****AÑADIR REPARTIDOR *****/
+/****************************/
+
+#formulario5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario5 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 2px solid #ee2737;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}
+
+/****************************/
+/*****BORRAR REPARTIDOR *****/
+/****************************/
+
+#formulario6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 230px;
+}
+
+#formulario6 form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 2px solid #ee2737;
+    border-radius: 30px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fira+Sans:ital,wght@1,900&family=Oswald:wght@500&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: black;
+}
+
+body{
+    overflow-x: hidden;
+    background-image: url("../imagenes/bg-inicio2.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+main{
+    padding-top: 10.8%;
+    font-family: "Oswald";
+    height: 100vh;
+}
+
+#btn-cancelar{
+  width: 160px;
+  height: 45px;
+  font-family: "Oswald";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: black;
+  border: 2px white solid;
+  border-radius: 32px;
+  padding: 16px 16px;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 15px 15px;
+}
+
+#btn-cancelar:hover{
+  color: black;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-container input {
+  padding-right: 40px;
+}
+
+.password-container .toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+section h1{
+  font-size: 50px;
+}
+
+section h1, label{
+  color: black;
+  text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+}
+
+#enlace_registro:hover{
+  text-decoration: underline;
+}
