@@ -358,7 +358,12 @@ class Usuario{
         
         if($consultaPedidos->execute()){
             $pedidos = $consultaPedidos->fetchAll();
-            return $pedidos;
+
+            if($pedidos === ""){
+                return null;
+            }else{
+                return $pedidos;
+            }
         }
     }
     

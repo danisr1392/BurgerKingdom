@@ -184,8 +184,12 @@ if(isset($_POST["borrar-user"])){
         
         //obtengo el id del usuario a partir de su correo
         if($id = Usuario::obtenerIDEmail($correo)){
-            //obtengo los pedidos que realizo este usuario
-            if($pedidos = Usuario::obtenerPedidosUser($id["id_user"])){
+
+            if(!Usuario::esAdmin($correo)){
+                //obtengo los pedidos que realizo este usuario
+                //puede ser null si se acaba de crear el user
+                $pedidos = Usuario::obtenerPedidosUser($id["id_user"]);
+
                 //elimino los valores de 'detallespedido' y luego de 'pedido' que contengan el id del usuario
                 foreach($pedidos as $pedido){
                     detallesPedido::eliminarUno($pedido["id_ped"]); //primero elimino los valores de 'detallespedido'
@@ -200,16 +204,31 @@ if(isset($_POST["borrar-user"])){
                     //informo que no se elimino al user
                     ?> <script>alert('Ha habido un error al eliminar el usuario');</script> <?php
                 }
+            }else{
+                //elimino al usuario
+                if(Usuario::eliminarPorEmail($correo)){
+                    //informo que se elimino al user
+                    ?> <script>alert('Se ha eliminado el usuario');</script> <?php
+                } else {
+                    //informo que no se elimino al user
+                    ?> <script>alert('Ha habido un error al eliminar el usuario');</script> <?php
+                }
             }
+        }else{
+            //informo que no se elimino al user
+            ?> <script>alert('El usuario no existe');</script> <?php
         }
     }else if(!empty($_POST["telefono"])){
-        //obtengo el POST de correo
+        //obtengo el POST de telefono
         $telefono = validar_cadena($_POST["telefono"]);
 
         //obtengo el id del usuario a partir de su telefono
         if($id = Usuario::obtenerIDTelefono($telefono)){
-            //obtengo los pedidos que realizo este usuario
-            if($pedidos = Usuario::obtenerPedidosUser($id["id_user"])){
+            if(!Usuario::esAdmin($telefono)){
+                //obtengo los pedidos que realizo este usuario
+                //puede ser null si se acaba de crear el user
+                $pedidos = Usuario::obtenerPedidosUser($id["id_user"]);
+
                 //elimino los valores de 'detallespedido' y luego de 'pedido' que contengan el id del usuario
                 foreach($pedidos as $pedido){
                     detallesPedido::eliminarUno($pedido["id_ped"]); //primero elimino los valores de 'detallespedido'
@@ -218,12 +237,25 @@ if(isset($_POST["borrar-user"])){
 
                 //elimino al usuario
                 if(Usuario::eliminarPorTelefono($telefono)){
+                    //informo que se elimino al user
+                    ?> <script>alert('Se ha eliminado el usuario');</script> <?php
+                } else {
+                    //informo que no se elimino al user
+                    ?> <script>alert('Ha habido un error al eliminar el usuario');</script> <?php
+                }
+            }else{
+                //elimino al usuario
+                if(Usuario::eliminarPorTelefono($telefono)){
+                    //informo que se elimino al user
                     ?> <script>alert('Se ha eliminado el usuario');</script> <?php
                 } else {
                     //informo que no se elimino al user
                     ?> <script>alert('Ha habido un error al eliminar el usuario');</script> <?php
                 }
             }
+        }else{
+            //informo que no se elimino al user
+            ?> <script>alert('El usuario no existe');</script> <?php
         }
     }else{
         //en caso de que se envie el form sin algun campo

@@ -215,9 +215,9 @@ foreach ($productos as $producto) {
             <div style="width: 88%;"><span class="text-start">DNI</span></div>
             <input type="text" placeholder="Introduce tu DNI" name="dni" pattern="\d{8}[A-Z]" maxlength="9" required>
             <div style="width: 88%;"><span class="text-start">Nombre</span></div>
-            <input type="text" placeholder="Introduzca su nombre" name="nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,30}$" required>
+            <input type="text" placeholder="Introduzca su nombre" name="nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,30}$" required maxlength="20">
             <div style="width: 88%;"><span class="text-start">Apellidos</span></div>
-            <input type="text" placeholder="Introduzca sus apellidos" name="apellidos" pattern="[A-Za-z\s]+" maxlength="30" required>
+            <input type="text" placeholder="Introduzca sus apellidos" name="apellidos" pattern="[A-Za-z\s]+" maxlength="40" required>
             <div style="width: 88%;"><span class="text-start">Provincia</span></div>
             <select class="form-select" name="provincia">
                 <option value='Almería'>Almería</option>
