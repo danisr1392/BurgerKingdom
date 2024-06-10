@@ -151,7 +151,7 @@
                 display: none;
             }
             
-            @media only screen and (max-width: 1224px){
+            @media only screen and (max-width: 1350px){
 
 
                 .checkbtn{

@@ -7,6 +7,15 @@ require("../Modelo/Producto.php");
 if(!$_GET["name"]){
     header("Location: index.php");
     exit();
+}else if($_GET["name"]){
+    //uso el nombre del producto para obtener sus datos
+    $datosProducto = Producto::obtenerUno($_GET["name"]);
+
+    //en caso de introducir un nombre manual que no exista en la bdd te mando a la carta 
+    if($datosProducto == "" || $datosProducto == null){
+        header("Location: carta.php");
+        exit();
+    }
 }
 
 ?>
@@ -40,6 +49,7 @@ if(!$_GET["name"]){
         if (isset($_GET["name"])) {
             //uso el nombre del producto para obtener sus datos
             $datosProducto = Producto::obtenerUno($_GET["name"]);
+
         ?>
             <div class="container">
                 <div class="row align-items-center">
