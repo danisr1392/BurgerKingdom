@@ -93,9 +93,9 @@ foreach ($productos as $producto) {
             <div style="width: 88%;"><span class="text-start">Nombre</span></div>
             <input type="text" placeholder="Introduzca el nombre del producto" id="nombre" name="nombre" maxlength="20" required>
             <div style="width: 88%;"><span class="text-start">Descripción</span></div>
-            <input type="textarea" placeholder="Introduzca la descripcion del producto" id="descripcion" name="descripcion" required>
+            <input type="textarea" placeholder="Introduzca la descripcion del producto" id="descripcion" name="descripcion" required maxlength="50">
             <div style="width: 88%;"><span class="text-start">Precio</span></div>
-            <input type="text" step="any" placeholder="1.00" id="precio" name="precio" required>
+            <input type="text" step="any" placeholder="1.00" id="precio" name="precio" required maxlength="10">
             <div style="width: 88%;"><span class="text-start">Tipo</span></div>
             <select name="tipo" id="tipo" placeholder="Tipo">
                 <option value="Hamburguesa">Hamburguesa</option>
@@ -165,11 +165,11 @@ foreach ($productos as $producto) {
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
             <h2>AÑADIR ADMIN</h2>
             <div style="width: 88%;"><span class="text-start">Nombre</span></div>
-            <input type="text" placeholder="Introduzca su nombre" name="nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,30}$" required>
+            <input type="text" placeholder="Introduzca su nombre" name="nombre" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{1,30}$" required maxlength="30">
             <div style="width: 88%;"><span class="text-start">Contraseña</span></div>
-            <input type="password" placeholder="Introduzca una clave de mínimo 6 caracteres" name="contrasenya" pattern="^.{6,}$" required>
+            <input type="password" placeholder="Introduzca una clave de mínimo 6 caracteres" name="contrasenya" pattern="^.{6,}$" required maxlength="25">
             <div style="width: 88%;"><span class="text-start">Email</span></div>
-            <input type="email" placeholder="Introduzca un email" name="email" required>
+            <input type="email" placeholder="Introduzca un email" name="email" required maxlength="60">
             <div style="width: 88%;"><span class="text-start">Teléfono</span></div>
             <input type="text" placeholder="Introduzca un número de 9 caracteres" name="telefono" maxlength="9" pattern="^\d{9}$" required>
             <div style="width: 88%;"><span class="text-start">Provincia</span></div>
@@ -184,9 +184,9 @@ foreach ($productos as $producto) {
                 <option value='Sevilla'>Sevilla</option>
             </select>
             <div style="width: 88%;"><span class="text-start">Ciudad</span></div>
-            <input type="text" placeholder="Introduzca su ciudad" name="ciudad" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s,.-]{3,20}$" required>
+            <input type="text" placeholder="Introduzca su ciudad" name="ciudad" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s,.-]{3,20}$" required maxlength="20">
             <div style="width: 88%;"><span class="text-start">Direccion</span></div>
-            <input type="text" placeholder="Introduzca su dirección" name="direccion" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s,.-]{3,50}$" required>
+            <input type="text" placeholder="Introduzca su dirección" name="direccion" pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s,.-]{3,50}$" required maxlength="50">
             <button type="submit" name="add-admin">Subir</button>
         </form>
     </div>
