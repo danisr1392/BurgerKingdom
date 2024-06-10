@@ -315,15 +315,19 @@ if(isset($_POST["borrar-rep"])){
         //obtengo el dni a eliminar
         $dni = validar_cadena($_POST["dni"]);
         
-        //elimino al repartidor usando su dni como referencia en la tabla
-        if(Repartidor::eliminarPorDNI($dni)){
-            //informo que se ha eliminado
-            ?> <script>alert('Se ha eliminado al repartidor');</script> <?php
+        if($dni == ""){
+            //elimino al repartidor usando su dni como referencia en la tabla
+            if(Repartidor::eliminarPorDNI($dni)){
+                //informo que se ha eliminado
+                ?> <script>alert('Se ha eliminado al repartidor');</script> <?php
+            } else {
+                //informo que se ha ocurrido un error
+                ?> <script>alert('Ha habido un error al eliminar al repartidor');</script> <?php
+            }
         } else {
             //informo que se ha ocurrido un error
-            ?> <script>alert('Ha habido un error al eliminar al repartidor');</script> <?php
+            ?> <script>alert('El dni no coincide con ningun repartidor');</script> <?php
         }
-        
     }else{
         //en caso de que se envie el form sin el campo
         ?> <script>alert('Error inesperado');</script> <?php
