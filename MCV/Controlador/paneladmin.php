@@ -315,7 +315,7 @@ if(isset($_POST["borrar-rep"])){
         //obtengo el dni a eliminar
         $dni = validar_cadena($_POST["dni"]);
         
-        if($dni == ""){
+        if($dni != ""){
             //elimino al repartidor usando su dni como referencia en la tabla
             if(Repartidor::eliminarPorDNI($dni)){
                 //informo que se ha eliminado
