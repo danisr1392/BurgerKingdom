@@ -348,7 +348,7 @@ INSERT INTO `usuario` (`id_user`, `nombre`, `contrasenya`, `email`, `telefono`, 
 (14, 'Manuel', '$2y$10$RcgTsqGVb.vNjXwSbBkv8uWQBkzsHGd/D85WALjUo3JY0hz4YFI6G', 'manuelgomez@gmail.com', '234567890', 'Sevilla', 'Triana', 'Calle Sevilla 30', '2023-09-21', 2),
 (15, 'Carmen', '$2y$10$RcgTsqGVb.vNjXwSbBkv8uWQBkzsHGd/D85WALjUo3JY0hz4YFI6G', 'carmenmartinez@gmail.com', '345678901', 'Málaga', 'Torremolinos', 'Avenida Malaga 5', '2023-09-21', 2),
 (16, 'Diego', '$2y$10$RcgTsqGVb.vNjXwSbBkv8uWQBkzsHGd/D85WALjUo3JY0hz4YFI6G', 'diegofernandez@gmail.com', '456789012', 'Córdoba', 'Córdoba', 'Plaza del Agua 22', '2023-09-21', 2),
-(22, 'a', '$2y$10$QJHVPotpzDP9FYHe.PfD9.VrC3EnYNunB4NtF/68cMwIOceLXx.5K', 'a@gmail.com', '622689322', 'Málaga', 'Torremolinos', 'Calle Juan Perez 19', '2023-12-26', 2),
+(22, 'a', '$2y$10$RcgTsqGVb.vNjXwSbBkv8uWQBkzsHGd/D85WALjUo3JY0hz4YFI6G', 'a@gmail.com', '622689322', 'Málaga', 'Torremolinos', 'Calle Juan Perez 19', '2023-12-26', 2),
 
 --
 -- Índices para tablas volcadas
